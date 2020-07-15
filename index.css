@@ -84,6 +84,7 @@ body{
 .popup-active{
     transform: translateX(-50%);
     z-index: 2;
+    position: fixed;
 }
 
 
