@@ -62,10 +62,10 @@ body{
 
 .popup{
     width: 50%;
-    height: 800px;
+    height: 100vh;
     margin: auto;
     background-color: white;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     right: 0;
     transform: translateX(100%);
