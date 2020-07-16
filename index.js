@@ -2,6 +2,7 @@
 let backdrop = document.querySelector('#backdrop');
 let detail = document.getElementsByClassName('detail');
 let popup = document.querySelector('.popup');
+let dataColor = document.querySelectorAll('.popuptext');
 
 //Popup elements variables
 let name = document.querySelector('.name');
@@ -62,16 +63,16 @@ for(let i = 0; i < detail.length; i++){
 
                     //Data Insertion
                     name.textContent = englishName;
-                    equa.textContent = equaRadius;
-                    polar.textContent =polarRadius;
-                    gravityV.textContent =gravity;
-                    masses.textContent = mass.massValue + ' to the power ' + mass.massExponent;
-                    perihelionV.textContent =perihelion;
-                    aphelionV.textContent = aphelion;
-                    revolution.textContent = sideralOrbit;
-                    rotation.textContent = sideralRotation;
-                    densityV.textContent = density;
-                    escapeV.textContent = escape;
+                    equa.textContent = equaRadius + ' km';
+                    polar.textContent =polarRadius + ' km';
+                    gravityV.innerHTML = gravity + ' ms' + '<sup>-2</sup>';
+                    masses.innerHTML = mass.massValue + ' x ' + ` 10<sup>${mass.massExponent}</sup> kg`;
+                    perihelionV.textContent =perihelion + ' km';
+                    aphelionV.textContent = aphelion + ' km';
+                    revolution.textContent = sideralOrbit + '  earth days';
+                    rotation.textContent = sideralRotation + '  hours';
+                    densityV.innerHTML = density + ' gm<sup>-3</sup>';
+                    escapeV.textContent = escape/1000 + ' km/s';
                     if(moons != null){
                         moonsCount.textContent = moons.length;
                     } else{
@@ -98,35 +99,49 @@ for(let i = 0; i < detail.length; i++){
                 
             }
 
+            function changeDc(color){
+                for(var i = 0; i < dataColor.length; i++){
+                    dataColor[i].style.color = color;
+                }
+            }
 
+            //Data Call Conditions
             switch(planet){
                 case "sun":
                     dataEachplanet('sun');
+                    changeDc('#ffca0a');
                     break;
                 case "mercury":
                     dataEachplanet('mercury');
-                    
+                    changeDc('#9e9e9d');
                     break;
                 case "venus":
                     dataEachplanet('venus');
+                    changeDc('#ff860d');
                     break;
                 case "earth":
                     dataEachplanet('earth');
+                    changeDc('#0dffff');
                     break;
                 case "mars":
                     dataEachplanet('mars');
+                    changeDc('#ff4a0d');
                     break;
                 case "jupiter":
                     dataEachplanet('jupiter');
+                    changeDc('#ffc061');
                     break;
                 case "saturn":
                     dataEachplanet('saturn');
+                    changeDc('#f240ff');
                     break;
                 case "uranus":
                     dataEachplanet('uranus');
+                    changeDc('#0bd9c1');
                     break;
                 case "neptune":
                     dataEachplanet('neptune');
+                    changeDc('#0b83d9');
                     break;
             }
             
