@@ -8,6 +8,19 @@ body{
     overflow-x: hidden;
     
 }
+
+header{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    height: 20vh;
+    
+}
+
+header > h1{
+    text-align: center;
+}
 #backdrop{
     background-color: #000;
     display: flex;
@@ -89,7 +102,7 @@ body{
     width: 100%;
     padding: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -100,10 +113,13 @@ body{
     letter-spacing: 0.5rem;
     text-decoration: underline;
     font-size: 2rem;
-    flex: 2;
+    flex: 5;
     text-align: center;
 }
 
+.toggle-burger{
+    flex: 1;
+}
 
 .toggle-burger> div{
     background-color: white;
@@ -111,7 +127,7 @@ body{
     height: 3px;
     margin: 3px;
     padding-left: 12px;
-    transition: ease 1.5s;
+    transition: ease 1s;
 }
 
 @keyframes burger{
