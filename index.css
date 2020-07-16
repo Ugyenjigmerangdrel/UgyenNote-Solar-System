@@ -28,16 +28,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     padding: 0 1rem ;
     font-size: 2rem;
     font-family: 'Oswald';
     color: rgb(230, 208, 13);
     z-index: 1;
+
 }
-
-
 
 #backdrop>div>img{
     width: 100%;
@@ -61,7 +60,7 @@ body{
 }
 
 .popup{
-    width: 50%;
+    width: 60%;
     height: 100vh;
     margin: auto;
     background-color: white;
@@ -72,8 +71,10 @@ body{
     transition: transform 0.5s ease-in;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
 }
 
 .popup>img{
@@ -82,11 +83,38 @@ body{
 }
 
 .popup-active{
-    transform: translateX(-50%);
+    transform: translateX(-35%);
     z-index: 2;
     position: fixed;
 }
 
+.valueHolder{
+    font-size: 1.3rem;
+    font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-columns: 14rem auto;
+    grid-template-rows: minmax(2.3rem, auto) repeat(14, 2.3rem);
+}
+
+.valueHolder > span{
+    color: rgb(14, 166, 236);
+}
+
+.valueHolder > p{
+    color: orange;
+}
+
+.head{
+    padding: 1.5rem;
+}
+
+.head>h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.5rem;
+    text-decoration: underline;
+}
 
 
 

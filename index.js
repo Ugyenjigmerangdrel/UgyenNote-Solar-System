@@ -63,27 +63,31 @@ for(let i = 0; i < detail.length; i++){
                     //Data Insertion
                     name.textContent = englishName;
                     equa.textContent = equaRadius;
-                    polar.textContent = polarRadius;
-                    gravityV.textContent = gravity;
-                    masses.textContent = mass.massValue + ' ' + mass.massExponent;
-                    perihelionV.textContent = perihelion;
+                    polar.textContent =polarRadius;
+                    gravityV.textContent =gravity;
+                    masses.textContent = mass.massValue + ' to the power ' + mass.massExponent;
+                    perihelionV.textContent =perihelion;
                     aphelionV.textContent = aphelion;
                     revolution.textContent = sideralOrbit;
                     rotation.textContent = sideralRotation;
                     densityV.textContent = density;
                     escapeV.textContent = escape;
                     if(moons != null){
-                        moonsCount.textContent = 'Number of Moons: '+ moons.length;
+                        moonsCount.textContent = moons.length;
                     } else{
-                        moonsCount.textContent= 'Number of Moons: '+ 0;
+                        moonsCount.textContent=  0;
                     }
-                    if(discoveredBy != null){
+                    if(discoveredBy != ""){
                         disby.textContent = discoveredBy;
                     } else{
                         disby.textContent = "Unknown";
                     }
                     
-                    disdate.textContent = discoveryDate;
+                    if(discoveryDate != ""){
+                        disdate.textContent = discoveryDate;
+                    } else{
+                        disdate.textContent = "Unknown";
+                    }
                 })
             }
             //DOM content manipulation function:
