@@ -111,10 +111,6 @@ for(let i = 0; i < detail.length; i++){
 
             //Data Call Conditions
             switch(planet){
-                case "sun":
-                    dataEachplanet('sun');
-                    changeDc('#ffca0a');
-                    break;
                 case "mercury":
                     dataEachplanet('mercury');
                     changeDc('#9e9e9d');

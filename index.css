@@ -165,6 +165,20 @@ header>div{
         align-items: center;
         
     }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;  
+        font-size: 12px;
+        height: auto;
+    }
+    .logo{
+        width: 70%;
+    }
+    header>div{
+        margin-left: 1.6rem;
+    }
 
     .head>h1{
         font-size: 1.2rem;
