@@ -61,7 +61,7 @@ body{
 
 .popup{
     width: 60%;
-    height: 100vh;
+    height: auto;
     margin: auto;
     background-color: white;
     position: fixed;
@@ -75,11 +75,6 @@ body{
     align-items: center;
     padding: 1rem 2rem;
     background-color: black;
-}
-
-.popup>img{
-    width: 100%;
-    max-width: 318px;
 }
 
 .popup-active{
@@ -102,6 +97,28 @@ body{
 
 .valueHolder > p{
     color: orange;
+}
+
+
+@media(max-width:800px){
+    .head{
+        padding: 0.5rem;
+    }
+    .popup{
+        width: 100%;
+        overflow: scroll;
+     
+        
+    }
+    .popup-active{
+        transform: translateX(0%);
+        
+    }
+    .valueHolder{
+        font-size: 0.7rem;
+        grid-template-columns: 10rem auto;
+    }
+    
 }
 
 .head{
