@@ -130,7 +130,12 @@ body{
 
 @media(max-width:600px){
     .head{
-        padding: 0.5rem;
+
+         width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
 
