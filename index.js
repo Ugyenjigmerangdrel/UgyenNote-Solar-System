@@ -3,6 +3,7 @@ let backdrop = document.querySelector('#backdrop');
 let detail = document.getElementsByClassName('detail');
 let popup = document.querySelector('.popup');
 let dataColor = document.querySelectorAll('.popuptext');
+let toggler = document.querySelector('.toggle-burger')
 
 //Popup elements variables
 let name = document.querySelector('.name');
@@ -35,8 +36,10 @@ window.addEventListener('resize', () => {
 //Events Handling for the div elements
 for(let i = 0; i < detail.length; i++){
     detail[i].addEventListener('click', () => {
-        popup.addEventListener('click', ()=> {
+        toggler.addEventListener('click', ()=> {
             popup.classList = 'popup';
+            toggler.classList = 'toggle-burger';
+            toggler.style.animation = '';
         })
         //Checks how many classes are there and if the number of class values equal to the conditional value i block the functionality of background div events.
         if(popup.classList.length === 2){
@@ -44,7 +47,8 @@ for(let i = 0; i < detail.length; i++){
            
         } else{
             popup.classList.toggle('popup-active');
-
+            toggler.classList.toggle('toggle')
+            toggler.style.animation = 'burger';
             //Variables
             var planet = detail[i].id;
             var planetaryAPi;

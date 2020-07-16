@@ -44,21 +44,6 @@ body{
     overflow: visible;
 }
 
-.content{
-    display: none;
-    justify-content: center;
-}
-
-.contentChange{
-    display: flex;
-    justify-content: center;
-}
-
-.content img{
-    width: 30%;
-    max-width: 318px;
-}
-
 .popup{
     width: 60%;
     height: 100vh;
@@ -119,18 +104,41 @@ body{
     text-align: center;
 }
 
+
 .toggle-burger> div{
     background-color: white;
     width: 20px;
     height: 3px;
     margin: 3px;
     padding-left: 12px;
+    transition: ease 1.5s;
+}
+
+@keyframes burger{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line-1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line-2{
+    opacity: 0;
+}
+.toggle .line-3{
+    transform: rotate(45deg) translate(-2px, -4px);
 }
 
 @media(max-width:600px){
     .head{
 
-         width: 100%;
+        width: 100%;
         padding: 1.5rem;
         display: flex;
         justify-content: center;
